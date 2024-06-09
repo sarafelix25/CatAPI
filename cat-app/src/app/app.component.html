@@ -1,0 +1,9 @@
+<div>
+  <h1>Cat Galery</h1>
+  <div *ngIf="catImages.length === 0">
+    Carregando...
+  </div>
+  <div *ngFor="let catImage of catImages">
+    <img [src]="catImage.url" alt="Imagem de Gato" width="60" height="60"/>
+  </div>
+</div>
