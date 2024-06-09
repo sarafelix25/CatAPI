@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DogService } from './dog.service';
+import { CatService } from './cat.service';
 
 @Component({
   selector: 'app-root',
@@ -7,17 +7,18 @@ import { DogService } from './dog.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  dogImages: any[] = [];
+  catImages: any[] = [];
 
-  constructor(private dogService: DogService) { }
+  constructor(private catService: CatService) { }
   ngOnInit() {
-    this.getDog();
+    this.getCat();
   }
 
-  getDog() {
-    this.dogService.getDog().subscribe(
+  getCat() {
+    this.catService.getCat().subscribe(
       (data: any[]) => {
-        this.dogImages = data;
+        console.log(data)
+        this.catImages = data;
       },
       (error) => {
           console.log('Erro ao buscar imagem de gato', error);

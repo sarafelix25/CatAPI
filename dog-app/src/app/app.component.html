@@ -1,9 +1,9 @@
 <div>
-  <h1>Galeria de Cachorros</h1>
-  <div *ngIf="dogImages.length === 0">
+  <h1>Cat Galery</h1>
+  <div *ngIf="catImages.length === 0">
     Carregando...
   </div>
-  <div *ngFor="let dogImage of dogImages">
-    <img [src]="dogImage.url" alt="Imagem de Cachorro" width="300" />
+  <div *ngFor="let catImage of catImages">
+    <img [src]="catImage.url" alt="Imagem de Gato" />
   </div>
 </div>
