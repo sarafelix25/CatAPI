@@ -7,17 +7,17 @@ import { DogService } from './dog.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  catImages: any[] = [];
+  dogImages: any[] = [];
 
   constructor(private dogService: DogService) { }
   ngOnInit() {
-    this.getCat();
+    this.getDog();
   }
 
-  getCat() {
-    this.dogService.getCat().subscribe(
+  getDog() {
+    this.dogService.getDog().subscribe(
       (data: any[]) => {
-        this.catImages = data;
+        this.dogImages = data;
       },
       (error) => {
           console.log('Erro ao buscar imagem de gato', error);
