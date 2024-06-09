@@ -14,5 +14,14 @@ export class AppComponent {
     this.getCat();
   }
 
-  getCat() {}
+  getCat() {
+    this.dogService.getCat().subscribe(
+      (data: any[]) => {
+        this.catImages = data;
+      },
+      (error) => {
+          console.log('Erro ao buscar imagem de gato', error);
+        }
+    );
+  }
 }
